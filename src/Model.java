@@ -35,7 +35,7 @@ public class Model {
     private void calculate(){
         dz1 = z1 + step * z2;
         dz2 = z2 + step * z3;
-        dz3 = z3 + step * (X - z1 - b1 * z2 -b2*z3 - a*z2 - a*b1*z3);
+        dz3 = z3 + step * ((X - z1 - b1 * z2 -b2*z3 - a*z2 - a*b1*z3)/a*b2);
         y = k * z1 - a * k  * z2;
 
         z1 = dz1;
