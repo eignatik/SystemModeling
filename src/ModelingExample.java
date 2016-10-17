@@ -1,8 +1,3 @@
-import Exceptions.InvalidDirectionException;
-
-import java.util.ArrayList;
-import java.util.Random;
-
 public class ModelingExample {
     public static void main(String[] args) {
 //        operateWithModel();

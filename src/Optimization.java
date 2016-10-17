@@ -79,7 +79,29 @@ public class Optimization {
                 isExist = true;
                 break;
             }
+//            if((x1 >= point.getX1()-0.1 || x1 <= point.getX1()+0.1) && (x2 >= point.getX2()-0.1 || x2 <= point.getX2()+0.1)){
+//                System.out.println("\nPoint " + x1 + ":" + x2 + " is already exists.\n");
+//                isExist = true;
+//                break;
+//            }
+
+//            if(compareWithDelta(point.getX1(), x1) == 0 && compareWithDelta(point.getX2(), x2) == 0){
+//                System.out.println("\nPoint " + x1 + ":" + x2 + " is already exists.\n");
+//                isExist = true;
+//                break;
+//            }
         }
         return isExist;
+    }
+
+    private int compareWithDelta(double x1, double x2){
+        double result = x1 - x2;
+        int returnedValue;
+        if(Math.abs(result) <= step) {
+            returnedValue = 0;
+        } else {
+            returnedValue = x1 > x2? 1:-1;
+        }
+        return returnedValue;
     }
 }
